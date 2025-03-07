@@ -1,0 +1,174 @@
+body {
+    font-family: "'Arial', sans-serif";
+    border: 10px solid darkred;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, #5a5a5a, #1a1a1a);
+    color: white;
+    min-height: 100vh;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    height: 100px;
+    margin-right: 20px;
+}
+.logo h1 {
+    color: white;
+    font-size: 24px;
+    margin: 0;
+}
+.bar {
+    border: 1px solid darkred;
+    margin-bottom: 50px;
+}
+.navbar {
+    background-color: black;
+    overflow: hidden;
+    flex-grow: 1;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.navbar li {
+    float: left;
+    margin: 0 10px;
+}
+.navbar a {
+    display: block;
+    color: white;
+    padding: 16px 20px;
+    text-decoration: none;
+    font-size: 20px;
+}
+.navbar a:hover {
+    background-color:darkred;
+    color: white;
+    border-radius: 4px;
+}
+.search-bar input {
+    float: right;
+    padding: 20px;
+    font-size: 16px;
+    border: 3px solid darkred;
+    border-radius: 10px;
+}
+.calendar {
+    height: 450px;
+    width:  1500px;
+    margin: 60px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+.event {
+    background-color: #313131;
+    border-radius: 40px;
+    padding: 15px;
+    box-shadow: 0 0 20px #6b0000;
+    transition: transform 0.3s;
+}
+.event:hover {
+    transform: translate(-5px);
+    background-color: rgb(68, 0, 0);
+}
+.event h2 {
+    color: #db0000;
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+}
+.event p {
+    margin: 5px 0;
+    font-size: 1rem;
+} 
+
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.card {
+    width: 300px; /* Adjust width as needed */
+    height: 450px; /* Ensures both front and back are equal */
+    perspective: 1000px;
+}
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d; /* Keep 3D perspective */
+}
+.card:hover .card-inner {
+    transform: rotateY(180deg); /* Flip the card on hover */
+}
+.front-page, .back-page {
+    backface-visibility: hidden; /* Hide the back when facing away */
+    border-radius: 25% 10%; /* Optional: Add border radius for aesthetics */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.front-page {
+    background-color: #1a1a1a;
+    color: white;
+}
+.back-page {
+    background-color: #353535; /* Back card color */
+    color: white;
+    transform: rotateY(180deg); /* Back is initially rotated */
+}
+.card-info, .card-content {
+    position: relative;
+    background: none; /* Remove the dark overlay */
+    bottom: auto;
+    left: auto;
+    text-align: center;
+}
+.card-info {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+.card-title {
+    margin: 0;
+    font-size: 1.5rem;
+}
+.card-subtitle {
+    margin: 0;
+    font-size: 1rem;
+}
+.card-button {
+    background-color: #6b0000;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.card-image {
+    width: 100%; /* Make the image fill the width of the card */
+    height: 100%; /* Set a fixed height for the image */
+    object-fit: cover; /* This will help cover the area without stretching the image */
+    border-radius: 15px;
+}

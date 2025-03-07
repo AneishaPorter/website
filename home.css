@@ -1,0 +1,83 @@
+body {
+    font-family: 'Georgia', serif;
+    border: 10px solid gray;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, #000000, #1a1a1a);
+    color: white;
+    min-height: 100vh;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    height: 100px;
+    margin-right: 20px;
+}
+.logo h1 {
+    color: white;
+    font-size: 24px;
+    margin: 0;
+}
+.bar {
+    border: 1px solid darkred;
+}
+.navbar {
+    background-color: black;
+    overflow: hidden;
+    flex-grow: 1;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.navbar li {
+    float: left;
+    margin: 0 10px;
+}
+.navbar a {
+    display: block;
+    color: white;
+    padding: 16px 20px;
+    text-decoration: none;
+    font-size: 20px;
+}
+.navbar a:hover {
+    background-color:darkred;
+    color: white;
+    border-radius: 4px;
+}
+.search-bar input {
+    float: right;
+    padding: 20px;
+    font-size: 16px;
+    border: 3px solid darkred;
+    border-radius: 10px;
+}
+.helmet {
+    background: url(../images/helmet.png) no-repeat center center;
+
+    background-size: 360px;
+    width: 400px;
+    height: 350px;
+    margin: 0 auto 5px;
+    padding-top: 150px;
+}
+.welcome-message {
+    text-align: center;
+    padding: 30px 20px;
+}
+.welcome-message h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.welcome-message p {
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 0 auto;
+}

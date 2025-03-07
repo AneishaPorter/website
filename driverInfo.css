@@ -1,0 +1,322 @@
+.alpine-bg {
+    background: url('../images/alpine.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    align-items: center;
+}
+.aston-bg {
+    background: url('../images/aston-martin.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    align-items: center;
+}
+.ferrari-bg {
+    background: url('../images/ferrari.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    align-items: center;
+}
+.haas-bg {
+    background: url('../images/haas.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    align-items: center;
+}
+.sauber-bg {
+    background: url('../images/kick-sauber.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    align-items: center;
+}
+.mclaren-bg {
+    background: url('../images/mclaren.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    align-items: center;
+}
+.mercedes-bg {
+    background: url('../images/mercedes.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    align-items: center;
+}
+.racing-bulls-bg {
+    background: url('../images/racing-bulls.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    align-items: center;
+}
+.red-bull-bg {
+    background: url('../images/red-bull-racing.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    align-items: center;
+}
+.williams-bg {
+    background: url('../images/williams.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    align-items: center;
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    backdrop-filter: blur(8px); /* Blur effect */
+    z-index: -1;
+    pointer-events: none; /* Ensure overlay doesn't block interaction */
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent background */
+    min-width: 20%;
+    padding: 20px;
+    z-index: 1; /* Make sure the container is above the overlay */
+    position: relative; /* Keeps it above background */
+}
+
+
+header {
+    padding: 20px;
+    color: white;
+    background: #222;
+    font-size: 20px;
+    font-weight: bold;
+    width: 93%;
+    margin: auto;
+    text-align: center;
+}
+.navbar {
+    width: 95%;
+    margin: auto;
+    z-index: 10;
+    position: relative;
+}
+.navbar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(59, 59, 59);
+    font-weight: bold;
+}
+.navbar li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+}
+.navbar li a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(39, 39, 39);
+}
+.navbar li {
+    display: inline-block;
+    padding: 10px;
+    margin: 0 15px;
+}
+.navbar .dropdown-content {
+    display: none;
+    color: white;
+    position: absolute;
+    background-color: lightgrey;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.navbar .dropdown-content a {
+    color: grey;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.navbar .dropdown-content a:hover {
+    width: 100%;
+    background-color: darkgrey;
+}
+.navbar .dropdown:hover .dropdown-content {
+    display: block;
+}
+.navbar a.active {
+    background-color: rgb(97, 97, 97);
+    color: #353535;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Profile Section */
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+
+/* Driver Card */
+/* Driver Card */
+.driver-card {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 320px;
+    box-shadow: 0 4px 20px rgba(124, 124, 124, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content inside */
+}
+
+/* Image Container */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 180px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Driver Image */
+.driver-img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid rgb(180, 180, 180);
+    box-shadow: 0 0 15px rgb(143, 143, 143);
+    padding: 15px;
+    z-index: 1;
+}
+.driver-img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.driver-card .driver-img {
+    align-items: center;
+    transition: transform 0.3s ease;  /* Add this for smooth scaling */
+    
+}
+.driver-card h2 {
+    margin-top: 30px;
+}
+.driver-card .team {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Stats Section */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+.stat-box {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 120px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+.stat-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px red;
+}
+.stat-box h3 {
+    color: red;
+    font-size: 30px;
+}
+
+/* Performance Section */
+.performance {
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+}
+.performance h2 {
+    margin-bottom: 20px;
+}
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    transition: 0.3s ease;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card img {
+    justify-content: center;
+    transform: scale(0.5);
+    object-fit: contain;
+}
+/* For the specific helmet image */
+.card img[src*="helmet"] {
+    transform: scale(1.1); /* Example scaling */
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px red;
+}
+
+
+
+.graphs-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+canvas {
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    margin-top: 20px;
+}
